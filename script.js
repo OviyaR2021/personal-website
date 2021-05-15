@@ -1,8 +1,12 @@
 alert("Hello!");
 let canvasElement = document.getElementById("canvas");
 let ctx = canvasElement.getContext("2d");
+
 canvasElement.width = Window.innerWidth;
 canvasElement.height = Window.innerHeight;
+
+let numberOfRows = canvasElement.height/cellSize;
+let numberOfColumns = canvasElement.width / cellSize;
 
 let makeCanvas = function() {
     ctx.fillStyle = "white";
